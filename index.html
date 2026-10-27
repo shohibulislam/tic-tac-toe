@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body{
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black h-[100vh] flex flex-col justify-center items-center select-none">
+    <section class="text-white text-base md:text-[20px] flex items-center gap-15 md:gap-30 m-3 md:m-5">
+        <p>Tic Tac Toe</p>
+        <button id="newGame-btn" class="bg-[rgba(255,255,255,0.2)] py-1 px-3 md:py-2 md:px-6 rounded-md transition-colors duration-200 hover:bg-[rgba(255,255,255,0.3)]">new game</button>
+    </section>
+    <section class="game-container grid grid-cols-[repeat(3,max-content)] gap-1 md:gap-2 text-[40px] md:text-[60px]">
+        <button class="boxes w-20 h-20 md:w-30 md:h-30 bg-white flex justify-center items-center rounded-tl-md transition-colors duration-200 hover:bg-[rgba(255,255,255,0.9)]"></button>
+        <button class="boxes w-20 h-20 md:w-30 md:h-30 bg-white flex justify-center items-center transition-colors duration-200 hover:bg-[rgba(255,255,255,0.9)]"></button>
+        <button class="boxes w-20 h-20 md:w-30 md:h-30 bg-white flex justify-center items-center rounded-tr-md transition-colors duration-200 hover:bg-[rgba(255,255,255,0.9)]"></button>
+        <button class="boxes w-20 h-20 md:w-30 md:h-30 bg-white flex justify-center items-center transition-colors duration-200 hover:bg-[rgba(255,255,255,0.9)]"></button>
+        <button class="boxes w-20 h-20 md:w-30 md:h-30 bg-white flex justify-center items-center transition-colors duration-200 hover:bg-[rgba(255,255,255,0.9)]"></button>
+        <button class="boxes w-20 h-20 md:w-30 md:h-30 bg-white flex justify-center items-center transition-colors duration-200 hover:bg-[rgba(255,255,255,0.9)]"></button>
+        <button class="boxes w-20 h-20 md:w-30 md:h-30 bg-white flex justify-center items-center rounded-bl-md transition-colors duration-200 hover:bg-[rgba(255,255,255,0.9)]"></button>
+        <button class="boxes w-20 h-20 md:w-30 md:h-30 bg-white flex justify-center items-center transition-colors duration-200 hover:bg-[rgba(255,255,255,0.9)]"></button>
+        <button class="boxes w-20 h-20 md:w-30 md:h-30 bg-white flex justify-center items-center rounded-br-md transition-colors duration-200 hover:bg-[rgba(255,255,255,0.9)]"></button>
+    </section>
+
+    <section class="text-white text-base md:text-[20px] w-full relative">
+        <p id="instructions" class="mt-5 w-full text-center absolute">PLAYER 1 (O) GOES FIRST.</p>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
